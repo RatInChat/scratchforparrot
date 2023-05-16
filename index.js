@@ -31,26 +31,4 @@ const toolbox = {
       },
     ]
   }
-  const blocklyArea = document.getElementById('parrot-area');
-  const blocklyDiv = document.getElementById('parrot-div');
-  const workspace = Blockly.inject(blocklyDiv,
-      {toolbox: document.getElementById('toolbox')});
-  const onresize = function(e) {
-    // Compute the absolute coordinates and dimensions of blocklyArea.
-    const element = blocklyArea;
-    let x = 0;
-    let y = 0;
-    do {
-      x += element.offsetLeft;
-      y += element.offsetTop;
-      element = element.offsetParent;
-    } while (element);
-    // Position blocklyDiv over blocklyArea.
-    blocklyDiv.style.left = x + 'px';
-    blocklyDiv.style.top = y + 'px';
-    blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
-    blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
-    Blockly.svgResize(workspace);
-  };
-  window.addEventListener('resize', onresize, false);
-  onresize();
+  const workspace = Blockly.inject('parrot-div', {toolbox: toolbox});
