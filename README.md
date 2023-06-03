@@ -1,2 +1,7 @@
-# scratchforparrot
-scratch for parrot.js? idk this is just for fun, for now.
+# Scratch For PiplupOS
+
+Basicly just create a easier way to write PiplupOS apps.
+
+With Scratch.
+
+Very easy indeed.
